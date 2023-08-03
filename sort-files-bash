@@ -1,0 +1,6 @@
+# Sort files into directories from Bash. At some point, ill figure out how to turn this into a script
+
+mkdir miscellaneous doc jpg
+find . -maxdepth 1 -type f \( -name "*.doc" -o -name "*.docx" \) -exec mv -v {} doc/ \;
+find . -maxdepth 1 -type f \( -name "*.jpg" -o -name "*.jpeg" \) -exec mv -v {} jpg/ \;
+find . -maxdepth 1 -type f -exec mv -v {} miscellaneous/ \;
